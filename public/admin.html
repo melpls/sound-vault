@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOUND VAULT — ADMIN</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="brand">SOUND VAULT</div>
+    <div class="subtitle">ADMIN PANEL</div>
+  </div>
+  <a class="admin-link" href="/">LIBRARY</a>
+</header>
+
+<main class="container admin">
+  <section id="login-box" class="panel">
+    <p class="eyebrow">AUTHORIZED ACCESS</p>
+    <h1>관리자 로그인</h1>
+    <input id="password" class="search" type="password" placeholder="관리자 비밀번호">
+    <button id="login" class="primary">LOGIN</button>
+    <p id="login-msg" class="message"></p>
+  </section>
+
+  <section id="panel" class="hidden">
+    <div class="panel">
+      <div class="panel-title">
+        <div>
+          <p class="eyebrow">CONTROL CENTER</p>
+          <h1>Sound Management</h1>
+        </div>
+        <button id="logout" class="ghost">LOGOUT</button>
+      </div>
+
+      <form id="upload-form">
+        <label class="upload">
+          <input id="file" name="sound" type="file" accept=".mp3,.wav,.ogg,.m4a,.aac,.flac" required>
+          <span>+ 사운드 파일 선택</span>
+        </label>
+        <button class="primary" type="submit">UPLOAD</button>
+      </form>
+      <p id="upload-msg" class="message"></p>
+    </div>
+
+    <div class="panel">
+      <h2>현재 사운드</h2>
+      <div id="admin-list"></div>
+    </div>
+  </section>
+</main>
+
+<script src="/admin.js"></script>
+</body>
+</html>
